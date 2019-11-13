@@ -28,14 +28,17 @@ namespace NBAplayers
                         Console.WriteLine("The file is empty.");
                         Show();
                     }
-                    if(list.Count > 0)
+                    else
                     {
-                        Console.WriteLine("{0} records were found in the file.", list.Count);
+                        if (list.Count > 0)
+                        {
+                            Console.WriteLine("{0} records were found in the file.", list.Count);
+                        }
+                        GetMaxYears();
+                        GetMinRate();
+                        FilterCriteria();
                     }
-                    GetMaxYears();
-                    GetMinRate();
-                    FilterCriteria();
-
+                    
                 }
                 catch (Exception)
                 {
